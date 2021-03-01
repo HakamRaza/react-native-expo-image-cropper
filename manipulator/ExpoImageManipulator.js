@@ -365,20 +365,20 @@ class ExpoImageManipulator extends Component {
                         </ScrollView>
                     </SafeAreaView>
                     <View style={{ flex: 1, backgroundColor: 'black' , width: Dimensions.get('window').width }}>
-                        <View
-                            // ref={'imageScrollView'}
-                            style={{ position: 'relative', flex: 1, justifyContent:'center', alignItems:'center'}}
-                            // contentContainerStyle={{backgroundColor: 'black'}}
-                            // maximumZoomScale={5}
-                            // minimumZoomScale={0.5}
-                            // onScroll={this.onHandleScroll}
-                            // bounces={false}
-                            // showsHorizontalScrollIndicator={false}
-                            // showsVerticalScrollIndicator={false}
-                            // ref={(c) => { this.scrollView = c }}
-                            // scrollEventThrottle={16}
-                            // scrollEnabled={false}
-                            // pinchGestureEnabled={false}
+                    <ScrollView
+                            ref={'imageScrollView'}
+                            style={{ position: 'relative', flex: 1}}
+                            contentContainerStyle={{backgroundColor: 'black', flex: 1, justifyContent:'center'}}
+                            maximumZoomScale={5}
+                            minimumZoomScale={0.5}
+                            onScroll={this.onHandleScroll}
+                            bounces={false}
+                            showsHorizontalScrollIndicator={false}
+                            showsVerticalScrollIndicator={false}
+                            ref={(c) => { this.scrollView = c }}
+                            scrollEventThrottle={16}
+                            scrollEnabled={false}
+                            pinchGestureEnabled={false}
                             // scrollEnabled={cropMode ? false : true}
                             // pinchGestureEnabled={cropMode ? false : pinchGestureEnabled}
                         >
@@ -399,7 +399,7 @@ class ExpoImageManipulator extends Component {
                                 }} initialWidth={cropWidth} initialHeight={cropHeight} initialTop={cropInitialTop} initialLeft={cropInitialLeft} minHeight={100} minWidth={100} />
                             )
                         }
-                        </View>
+                        </ScrollView>
                     </View>
                 </Modal>
             )
